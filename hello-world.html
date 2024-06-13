@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>گو با مثال: Hello World</title>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+</head>
+<script>
+    window.onkeydown = (e) => {
+        if (e.ctrlKey || e.altKey || e.shiftKey) {
+            return;
+        }
+        
+        
+        if (e.key == "ArrowRight") {
+            window.location.href = 'values';
+        }
+        
+    }
+</script>
+<body dir="rtl">
+<div class="example" id="hello-world">
+    <h2><a href="./">گو با مثال</a>: Hello World</h2>
+    
+    <table>
+        
+        <tr>
+            <td class="docs">
+                <p>برنامه اولمون پیام معروف &ldquo;hello world&rdquo; رو چاپ می‌کنه.
+این هم کل کدش.</p>
+
+            </td>
+            <td  class="code leading">
+                <a href="https://go.dev/play/p/cd6i9rumA9O"><img title="اجرای کد" src="play.png" class="run" /></a><img title="کپی کد" src="clipboard.png" class="copy" />
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;hello world&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+    </table>
+    
+    <table>
+        
+        <tr>
+            <td class="docs">
+                <p>برای اجرای برنامه، کد رو تو فایل <code>hello-world.go</code> بذارین
+و از دستور <code>go run</code> استفاده کنین.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go run hello-world.go
+</span></span><span class="line"><span class="cl"><span class="go">hello world</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>بعضی وقت‌ها می‌خوایم برنامه‌هامون رو به صورت باینری
+بسازیم. این کار رو با استفاده از <code>go build</code> انجام بدیم.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go build hello-world.go
+</span></span><span class="line"><span class="cl"><span class="gp">$</span> ls
+</span></span><span class="line"><span class="cl"><span class="go">hello-world    hello-world.go</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>بعدش می‌تونیم فایل باینری ساخته شده رو مستقیم اجرا کنیم.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> ./hello-world
+</span></span><span class="line"><span class="cl"><span class="go">hello world</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>حالا که می‌تونیم برنامه‌های ساده Go رو اجرا و بیلد کنیم،
+بیاین بیشتر درباره این زبان یاد بگیریم.</p>
+
+            </td>
+            <td  class="code empty">
+                
+                
+            </td>
+        </tr>
+        
+    </table>
+    
+    
+    <p class="next">
+        مثال بعدی: <a href="values">Values</a>.
+    </p>
+    
+    
+<p class="footer">
+    توسط <a href="https://markmcgranaghan.com">مارک مک‌گراناگان</a> و <a href="https://eli.thegreenplace.net">الی بندرسکی</a> | <a href="https://github.com/mmcgrana/gobyexample">سورس</a> | <a href="https://github.com/mmcgrana/gobyexample#license">لایسنس</a>
+</p>
+
+</div>
+<script>
+    var codeLines = [];
+    codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func main() {\u000A    fmt.Println(\"hello world\")\u000A}\u000A');codeLines.push('');codeLines.push('');codeLines.push('');codeLines.push('');
+</script>
+<script src="site.js" async></script>
+</body>
+</html>

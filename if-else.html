@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>گو با مثال: If/Else</title>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+</head>
+<script>
+    window.onkeydown = (e) => {
+        if (e.ctrlKey || e.altKey || e.shiftKey) {
+            return;
+        }
+        
+        if (e.key == "ArrowLeft") {
+            window.location.href = 'for';
+        }
+        
+        
+        if (e.key == "ArrowRight") {
+            window.location.href = 'switch';
+        }
+        
+    }
+</script>
+<body dir="rtl">
+<div class="example" id="if-else">
+    <h2><a href="./">گو با مثال</a>: If/Else</h2>
+    
+    <table>
+        
+        <tr>
+            <td class="docs">
+                <p>دسته‌بندی با <code>if</code> و <code>else</code> در Go خیلی ساده است.</p>
+
+            </td>
+            <td  class="code empty leading">
+                
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                <a href="https://go.dev/play/p/nM7Q81t-DVX"><img title="اجرای کد" src="play.png" class="run" /></a><img title="کپی کد" src="clipboard.png" class="copy" />
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>این یک مثال ساده است.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="k">if</span> <span class="mi">7</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="srtl">&#34;۷ زوج است&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="srtl">&#34;۷ فرد است&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>می‌تونین یه دستور <code>if</code> بدون else داشته باشین.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="k">if</span> <span class="mi">8</span><span class="o">%</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="srtl">&#34;۸ بر ۴ بخش‌پذیر است&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>عملگرهای منطقی مثل <code>&amp;&amp;</code> و <code>||</code> اغلب تو شرایط
+مفید هستن.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="k">if</span> <span class="mi">8</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="mi">7</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="srtl">&#34;یا ۸ یا ۷ زوج است&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>یک دستور می‌تونه قبل از شرط‌ها بیاد؛ هر متغیری که
+تو این دستور تعریف بشه، تو همه بخش‌های بعدی
+در دسترس خواهد بود.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">num</span> <span class="o">:=</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">num</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span> <span class="srtl">&#34;منفی است&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">num</span> <span class="p">&lt;</span> <span class="mi">10</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span> <span class="srtl">&#34;یک رقمی است&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span> <span class="srtl">&#34;چند رقمی است&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>توجه کنین که در Go نیاز به پرانتز دور شرایط نیست
+ولی آکولادها الزامی هستند.</p>
+
+            </td>
+            <td  class="code empty">
+                
+                
+            </td>
+        </tr>
+        
+    </table>
+    
+    <table>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go run if-else.go
+</span></span><span class="line"><span class="cl"><span class="go">7 is odd
+</span></span></span><span class="line"><span class="cl"><span class="go">8 is divisible by 4
+</span></span></span><span class="line"><span class="cl"><span class="go">either 8 or 7 are even
+</span></span></span><span class="line"><span class="cl"><span class="go">9 has 1 digit</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>There is no <a href="https://en.wikipedia.org/wiki/%3F:">ternary if</a>
+in Go, so you&rsquo;ll need to use a full <code>if</code> statement even
+for basic conditions.</p>
+
+            </td>
+            <td  class="code empty">
+                
+                
+            </td>
+        </tr>
+        
+    </table>
+    
+    
+    <p class="next">
+        مثال بعدی: <a href="switch">Switch</a>.
+    </p>
+    
+    
+<p class="footer">
+    توسط <a href="https://markmcgranaghan.com">مارک مک‌گراناگان</a> و <a href="https://eli.thegreenplace.net">الی بندرسکی</a> | <a href="https://github.com/mmcgrana/gobyexample">سورس</a> | <a href="https://github.com/mmcgrana/gobyexample#license">لایسنس</a>
+</p>
+
+</div>
+<script>
+    var codeLines = [];
+    codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func main() {\u000A');codeLines.push('    if 7%2 \u003D\u003D 0 {\u000A        fmt.Println(\"۷ زوج است\")\u000A    } else {\u000A        fmt.Println(\"۷ فرد است\")\u000A    }\u000A');codeLines.push('    if 8%4 \u003D\u003D 0 {\u000A        fmt.Println(\"۸ بر ۴ بخش\u200Cپذیر است\")\u000A    }\u000A');codeLines.push('    if 8%2 \u003D\u003D 0 || 7%2 \u003D\u003D 0 {\u000A        fmt.Println(\"یا ۸ یا ۷ زوج است\")\u000A    }\u000A');codeLines.push('    if num :\u003D 9; num \u003C 0 {\u000A        fmt.Println(num, \"منفی است\")\u000A    } else if num \u003C 10 {\u000A        fmt.Println(num, \"یک رقمی است\")\u000A    } else {\u000A        fmt.Println(num, \"چند رقمی است\")\u000A    }\u000A}\u000A');codeLines.push('');codeLines.push('');codeLines.push('');
+</script>
+<script src="site.js" async></script>
+</body>
+</html>
