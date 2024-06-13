@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>گو با مثال: Variables</title>
+    <link rel="stylesheet" href="site.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+
+</head>
+<script>
+    window.onkeydown = (e) => {
+        if (e.ctrlKey || e.altKey || e.shiftKey) {
+            return;
+        }
+        
+        if (e.key == "ArrowLeft") {
+            window.location.href = 'values';
+        }
+        
+        
+        if (e.key == "ArrowRight") {
+            window.location.href = 'constants';
+        }
+        
+    }
+</script>
+<body dir="rtl">
+<div class="example" id="variables">
+    <h2><a href="./">گو با مثال</a>: Variables</h2>
+    
+    <table>
+        
+        <tr>
+            <td class="docs">
+                <p>در Go، <em>متغیرها</em> به صورت صریح تعریف می‌شن و توسط
+کامپایلر استفاده می‌شن تا مثلاً نوع درست فراخوانی
+توابع رو بررسی کنه.</p>
+
+            </td>
+            <td  class="code empty leading">
+                
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                <a href="https://go.dev/play/p/pjHUzj6NUxw"><img title="اجرای کد" src="play.png" class="run" /></a><img title="کپی کد" src="clipboard.png" class="copy" />
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p><code>var</code> یک یا چند متغیر رو تعریف می‌کنه.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="s">&#34;initial&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>می‌تونین چند متغیر رو با هم تعریف کنین.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>Go نوع متغیرهای مقداردهی شده رو حدس می‌زنه.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">d</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>متغیرهایی که بدون مقداردهی اولیه تعریف
+می‌شن <em>مقدار صفر</em> می‌گیرن. مثلاً مقدار صفر
+برای <code>int</code> برابر <code>0</code> است.</p>
+
+            </td>
+            <td  class="code leading">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">e</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                <p>دستور <code>:=</code> یک روش کوتاه برای تعریف و
+مقداردهی متغیر است، مثلاً توی
+<code>var f string = &quot;apple&quot;</code> .
+این دستور فقط داخل توابع قابل استفاده است.</p>
+
+            </td>
+            <td  class="code">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl">    <span class="nx">f</span> <span class="o">:=</span> <span class="s">&#34;apple&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+    </table>
+    
+    <table>
+        
+        <tr>
+            <td class="docs">
+                
+            </td>
+            <td  class="code">
+                
+                <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="gp">$</span> go run variables.go
+</span></span><span class="line"><span class="cl"><span class="go">initial
+</span></span></span><span class="line"><span class="cl"><span class="go">1 2
+</span></span></span><span class="line"><span class="cl"><span class="go">true
+</span></span></span><span class="line"><span class="cl"><span class="go">0
+</span></span></span><span class="line"><span class="cl"><span class="go">apple</span></span></span></code></pre></body></html>
+            </td>
+        </tr>
+        
+    </table>
+    
+    
+    <p class="next">
+        مثال بعدی: <a href="constants">Constants</a>.
+    </p>
+    
+    
+<p class="footer">
+    توسط <a href="https://markmcgranaghan.com">مارک مک‌گراناگان</a> و <a href="https://eli.thegreenplace.net">الی بندرسکی</a> | <a href="https://github.com/mmcgrana/gobyexample">سورس</a> | <a href="https://github.com/mmcgrana/gobyexample#license">لایسنس</a>
+</p>
+
+</div>
+<script>
+    var codeLines = [];
+    codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func main() {\u000A');codeLines.push('    var a \u003D \"initial\"\u000A    fmt.Println(a)\u000A');codeLines.push('    var b, c int \u003D 1, 2\u000A    fmt.Println(b, c)\u000A');codeLines.push('    var d \u003D true\u000A    fmt.Println(d)\u000A');codeLines.push('    var e int\u000A    fmt.Println(e)\u000A');codeLines.push('    f :\u003D \"apple\"\u000A    fmt.Println(f)\u000A}\u000A');codeLines.push('');
+</script>
+<script src="site.js" async></script>
+</body>
+</html>
