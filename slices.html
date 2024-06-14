@@ -32,8 +32,8 @@
         
         <tr>
             <td class="docs">
-                <p><em>Slices</em> are an important data type in Go, giving
-a more powerful interface to sequences than arrays.</p>
+                <p><em>اسلایس‌ها</em> (Slice) یک نوع داده مهم در Go هستن که
+یک اینترفیس قوی‌تر برای دنباله‌ها نسبت به آرایه‌ها فراهم می‌کنن.</p>
 
             </td>
             <td  class="code empty leading">
@@ -47,7 +47,7 @@ a more powerful interface to sequences than arrays.</p>
                 
             </td>
             <td  class="code leading">
-                <a href="https://go.dev/play/p/kiy1StxorBF"><img title="اجرای کد" src="play.png" class="run" /></a><img title="کپی کد" src="clipboard.png" class="copy" />
+                <a href="https://go.dev/play/p/5VfjqNnvcim"><img title="اجرای کد" src="play.png" class="run" /></a><img title="کپی کد" src="clipboard.png" class="copy" />
                 <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre></body></html>
             </td>
         </tr>
@@ -77,10 +77,9 @@ a more powerful interface to sequences than arrays.</p>
         
         <tr>
             <td class="docs">
-                <p>Unlike arrays, slices are typed only by the
-elements they contain (not the number of elements).
-An uninitialized slice equals to nil and has
-length 0.</p>
+                <p>بر خلاف آرایه‌ها، اسلایس‌ها فقط بر اساس
+عناصر داخلشون تعریف می‌شن (نه تعداد عناصر).
+یک اسلایس مقداردهی‌نشده برابر با nil و طول صفر داره.</p>
 
             </td>
             <td  class="code leading">
@@ -92,13 +91,12 @@ length 0.</p>
         
         <tr>
             <td class="docs">
-                <p>To create an empty slice with non-zero length, use
-the builtin <code>make</code>. Here we make a slice of
-<code>string</code>s of length <code>3</code> (initially zero-valued).
-By default a new slice&rsquo;s capacity is equal to its
-length; if we know the slice is going to grow ahead
-of time, it&rsquo;s possible to pass a capacity explicitly
-as an additional parameter to <code>make</code>.</p>
+                <p>برای ساختن یک اسلایس خالی با طول غیرصفر، از
+<code>make</code> استفاده کنید. اینجا ما یک اسلایس از
+<code>string</code> با طول <code>3</code> می‌سازیم (اولیه‌شده با مقدار صفر).
+به طور پیش‌فرض، ظرفیت یک اسلایس جدید برابر با طولشه؛
+اگه بدونیم که اسلایس قراره رشد کنه، می‌تونیم ظرفیت
+رو به عنوان پارامتر اضافی به <code>make</code> بدیم.</p>
 
             </td>
             <td  class="code leading">
@@ -110,7 +108,7 @@ as an additional parameter to <code>make</code>.</p>
         
         <tr>
             <td class="docs">
-                <p>We can set and get just like with arrays.</p>
+                <p>می‌تونیم تنظیم و گرفتن مقدار رو مثل آرایه‌ها انجام بدیم.</p>
 
             </td>
             <td  class="code leading">
@@ -125,7 +123,7 @@ as an additional parameter to <code>make</code>.</p>
         
         <tr>
             <td class="docs">
-                <p><code>len</code> returns the length of the slice as expected.</p>
+                <p><code>len</code> طول اسلایس رو برمی‌گردونه همونطور که انتظار داریم.</p>
 
             </td>
             <td  class="code leading">
@@ -136,12 +134,12 @@ as an additional parameter to <code>make</code>.</p>
         
         <tr>
             <td class="docs">
-                <p>In addition to these basic operations, slices
-support several more that make them richer than
-arrays. One is the builtin <code>append</code>, which
-returns a slice containing one or more new values.
-Note that we need to accept a return value from
-<code>append</code> as we may get a new slice value.</p>
+                <p>علاوه بر این عملیات پایه، اسلایس‌ها از عملیات‌های
+بیشتری پشتیبانی می‌کنن که اون‌ها رو قوی‌تر از آرایه‌ها
+می‌کنه. یکی از اون‌ها <code>append</code> هست که یک اسلایس
+حاوی یک یا چند مقدار جدید رو برمی‌گردونه.
+توجه کنید که باید مقدار برگشتی <code>append</code> رو
+ذخیره کنیم چون ممکنه یک اسلایس جدید بگیریم.</p>
 
             </td>
             <td  class="code leading">
@@ -154,9 +152,8 @@ Note that we need to accept a return value from
         
         <tr>
             <td class="docs">
-                <p>Slices can also be <code>copy</code>&rsquo;d. Here we create an
-empty slice <code>c</code> of the same length as <code>s</code> and copy
-into <code>c</code> from <code>s</code>.</p>
+                <p>اسلایس‌ها می‌تونن با <code>copy</code> هم کپی بشن. اینجا ما
+یک اسلایس خالی <code>c</code> به طول <code>s</code> می‌سازیم و از <code>s</code> به <code>c</code> کپی می‌کنیم.</p>
 
             </td>
             <td  class="code leading">
@@ -169,9 +166,9 @@ into <code>c</code> from <code>s</code>.</p>
         
         <tr>
             <td class="docs">
-                <p>Slices support a &ldquo;slice&rdquo; operator with the syntax
-<code>slice[low:high]</code>. For example, this gets a slice
-of the elements <code>s[2]</code>, <code>s[3]</code>, and <code>s[4]</code>.</p>
+                <p>اسلایس‌ها از یک عملگر &ldquo;slice&rdquo; با دستور
+<code>slice[low:high]</code> پشتیبانی می‌کنن. برای مثال، این
+اسلایس عناصر <code>s[2]</code>، <code>s[3]</code> و <code>s[4]</code> رو می‌گیره.</p>
 
             </td>
             <td  class="code leading">
@@ -183,7 +180,7 @@ of the elements <code>s[2]</code>, <code>s[3]</code>, and <code>s[4]</code>.</p>
         
         <tr>
             <td class="docs">
-                <p>This slices up to (but excluding) <code>s[5]</code>.</p>
+                <p>این از روی s یک اسلایس جدید تا پنجمین عضو (به جز عضو پنجم) می‌سازه.</p>
 
             </td>
             <td  class="code leading">
@@ -195,7 +192,7 @@ of the elements <code>s[2]</code>, <code>s[3]</code>, and <code>s[4]</code>.</p>
         
         <tr>
             <td class="docs">
-                <p>And this slices up from (and including) <code>s[2]</code>.</p>
+                <p>و این از دومین عضو (شامل اون) به بعد یک اسلایس جدید می‌سازه.</p>
 
             </td>
             <td  class="code leading">
@@ -207,8 +204,7 @@ of the elements <code>s[2]</code>, <code>s[3]</code>, and <code>s[4]</code>.</p>
         
         <tr>
             <td class="docs">
-                <p>We can declare and initialize a variable for slice
-in a single line as well.</p>
+                <p>می‌تونیم یک متغیر اسلایس رو تو یک خط تعریف و مقداردهی کنیم.</p>
 
             </td>
             <td  class="code leading">
@@ -220,8 +216,7 @@ in a single line as well.</p>
         
         <tr>
             <td class="docs">
-                <p>The <code>slices</code> package contains a number of useful
-utility functions for slices.</p>
+                <p>پکیج <code>slices</code> تعدادی توابع مفید برای اسلایس‌ها رو داره.</p>
 
             </td>
             <td  class="code leading">
@@ -235,9 +230,8 @@ utility functions for slices.</p>
         
         <tr>
             <td class="docs">
-                <p>Slices can be composed into multi-dimensional data
-structures. The length of the inner slices can
-vary, unlike with multi-dimensional arrays.</p>
+                <p>اسلایس‌ها می‌تونن به ساختارهای داده چندبعدی تبدیل بشن.
+طول اسلایس‌های داخلی می‌تونه متفاوت باشه، بر خلاف آرایه‌های چندبعدی.</p>
 
             </td>
             <td  class="code">

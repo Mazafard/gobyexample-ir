@@ -191,6 +191,7 @@ body .mf { color: #666666 }  /* Literal.Number.Float */
 body .mh { color: #666666 }  /* Literal.Number.Hex */
 body .mi { color: #666666 }  /* Literal.Number.Integer */
 body .mo { color: #666666 }  /* Literal.Number.Oct */
+body .srtl  { color: #219161; direction:rtl; display: inline-block }  /* Literal.String */
 body .s  { color: #219161 }  /* Literal.String */
 body .sc { color: #219161 }  /* Literal.String.Char */
 body .gp { color: #000080 }  /* Generic.Prompt: shell prompt */

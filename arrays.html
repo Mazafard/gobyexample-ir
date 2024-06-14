@@ -32,10 +32,10 @@
         
         <tr>
             <td class="docs">
-                <p>In Go, an <em>array</em> is a numbered sequence of elements of a
-specific length. In typical Go code, <a href="slices">slices</a> are
-much more common; arrays are useful in some special
-scenarios.</p>
+                <p>در Go، یک <em>آرایه</em> دنباله‌ای شماره‌گذاری شده از
+عناصر با طول مشخصه. در کدهای معمولی Go، <a href="slices">اسلایس‌ها</a>
+خیلی رایج‌تر هستن؛ آرایه‌ها در بعضی از سناریوهای خاص
+مفید هستن.</p>
 
             </td>
             <td  class="code empty leading">
@@ -49,7 +49,7 @@ scenarios.</p>
                 
             </td>
             <td  class="code leading">
-                <a href="https://go.dev/play/p/zVIFeNnUdwv"><img title="اجرای کد" src="play.png" class="run" /></a><img title="کپی کد" src="clipboard.png" class="copy" />
+                <a href="https://go.dev/play/p/k34Z12dieES"><img title="اجرای کد" src="play.png" class="run" /></a><img title="کپی کد" src="clipboard.png" class="copy" />
                 <html><head></head><body><pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre></body></html>
             </td>
         </tr>
@@ -76,10 +76,10 @@ scenarios.</p>
         
         <tr>
             <td class="docs">
-                <p>Here we create an array <code>a</code> that will hold exactly
-5 <code>int</code>s. The type of elements and length are both
-part of the array&rsquo;s type. By default an array is
-zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
+                <p>اینجا ما یک آرایه <code>a</code> می‌سازیم که دقیقاً
+5 <code>int</code> رو نگه می‌داره. نوع عناصر و طول هر دو
+بخشی از نوع آرایه هستن. به طور پیش‌فرض، مقدار
+آرایه صفره، که برای <code>int</code>ها یعنی <code>0</code>.</p>
 
             </td>
             <td  class="code leading">
@@ -91,9 +91,9 @@ zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
         
         <tr>
             <td class="docs">
-                <p>We can set a value at an index using the
-<code>array[index] = value</code> syntax, and get a value with
-<code>array[index]</code>.</p>
+                <p>می‌تونیم با استفاده از دستور <code>array[index] = value</code>
+یک مقدار رو در یک ایندکس تنظیم کنیم و با
+<code>array[index]</code> مقدار رو بگیریم.</p>
 
             </td>
             <td  class="code leading">
@@ -106,7 +106,7 @@ zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
         
         <tr>
             <td class="docs">
-                <p>The builtin <code>len</code> returns the length of an array.</p>
+                <p>تابع داخلی <code>len</code> طول آرایه رو برمی‌گردونه.</p>
 
             </td>
             <td  class="code leading">
@@ -117,8 +117,8 @@ zero-valued, which for <code>int</code>s means <code>0</code>s.</p>
         
         <tr>
             <td class="docs">
-                <p>Use this syntax to declare and initialize an array
-in one line.</p>
+                <p>از این دستور برای تعریف و مقداردهی آرایه
+در یک خط استفاده کنید.</p>
 
             </td>
             <td  class="code leading">
@@ -130,8 +130,8 @@ in one line.</p>
         
         <tr>
             <td class="docs">
-                <p>You can also have the compiler count the number of
-elements for you with <code>...</code></p>
+                <p>همچنین می‌تونید به کامپایلر اجازه بدین که
+تعداد عناصر رو برای شما بشماره با <code>...</code></p>
 
             </td>
             <td  class="code leading">
@@ -143,8 +143,8 @@ elements for you with <code>...</code></p>
         
         <tr>
             <td class="docs">
-                <p>If you specify the index with <code>:</code>, the elements in
-between will be zeroed.</p>
+                <p>اگه ایندکس رو با <code>:</code> مشخص کنید، عناصر بین اون‌ها
+صفر می‌شن.</p>
 
             </td>
             <td  class="code leading">
@@ -156,9 +156,9 @@ between will be zeroed.</p>
         
         <tr>
             <td class="docs">
-                <p>Array types are one-dimensional, but you can
-compose types to build multi-dimensional data
-structures.</p>
+                <p>تایپ آرایه‌ها یک‌بعدی‌اند ولی می‌تونید
+تایپ‌های مختلفی رو ترکیب کنید تا ساختارهای داده چندبعدی
+بسازید.</p>
 
             </td>
             <td  class="code leading">
@@ -175,8 +175,8 @@ structures.</p>
         
         <tr>
             <td class="docs">
-                <p>You can create and initialize multi-dimensional
-arrays at once too.</p>
+                <p>همچنین می‌تونید آرایه‌های چندبعدی رو در یک
+مرحله تعریف و مقداردهی کنید.</p>
 
             </td>
             <td  class="code">
@@ -196,9 +196,19 @@ arrays at once too.</p>
         
         <tr>
             <td class="docs">
-                <p>Note that arrays appear in the form <code>[v1 v2 v3 ...]</code>
-when printed with <code>fmt.Println</code>.</p>
+                <p>توجه داشته باشید که وقتی آرایه‌ها با <code>fmt.Println</code>
+چاپ می‌شن، به صورت <code>[v1 v2 v3 ...]</code> نمایش داده می‌شن.</p>
 
+            </td>
+            <td  class="code empty leading">
+                
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="docs">
+                
             </td>
             <td  class="code">
                 
@@ -230,7 +240,7 @@ when printed with <code>fmt.Println</code>.</p>
 </div>
 <script>
     var codeLines = [];
-    codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func main() {\u000A');codeLines.push('    var a [5]int\u000A    fmt.Println(\"emp:\", a)\u000A');codeLines.push('    a[4] \u003D 100\u000A    fmt.Println(\"set:\", a)\u000A    fmt.Println(\"get:\", a[4])\u000A');codeLines.push('    fmt.Println(\"len:\", len(a))\u000A');codeLines.push('    b :\u003D [5]int{1, 2, 3, 4, 5}\u000A    fmt.Println(\"dcl:\", b)\u000A');codeLines.push('    b \u003D [...]int{1, 2, 3, 4, 5}\u000A    fmt.Println(\"dcl:\", b)\u000A');codeLines.push('    b \u003D [...]int{100, 3: 400, 500}\u000A    fmt.Println(\"idx:\", b)\u000A');codeLines.push('    var twoD [2][3]int\u000A    for i :\u003D 0; i \u003C 2; i++ {\u000A        for j :\u003D 0; j \u003C 3; j++ {\u000A            twoD[i][j] \u003D i + j\u000A        }\u000A    }\u000A    fmt.Println(\"2d: \", twoD)\u000A');codeLines.push('    twoD \u003D [2][3]int{\u000A        {1, 2, 3},\u000A        {1, 2, 3},\u000A    }\u000A    fmt.Println(\"2d: \", twoD)\u000A}\u000A');codeLines.push('');
+    codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func main() {\u000A');codeLines.push('    var a [5]int\u000A    fmt.Println(\"emp:\", a)\u000A');codeLines.push('    a[4] \u003D 100\u000A    fmt.Println(\"set:\", a)\u000A    fmt.Println(\"get:\", a[4])\u000A');codeLines.push('    fmt.Println(\"len:\", len(a))\u000A');codeLines.push('    b :\u003D [5]int{1, 2, 3, 4, 5}\u000A    fmt.Println(\"dcl:\", b)\u000A');codeLines.push('    b \u003D [...]int{1, 2, 3, 4, 5}\u000A    fmt.Println(\"dcl:\", b)\u000A');codeLines.push('    b \u003D [...]int{100, 3: 400, 500}\u000A    fmt.Println(\"idx:\", b)\u000A');codeLines.push('    var twoD [2][3]int\u000A    for i :\u003D 0; i \u003C 2; i++ {\u000A        for j :\u003D 0; j \u003C 3; j++ {\u000A            twoD[i][j] \u003D i + j\u000A        }\u000A    }\u000A    fmt.Println(\"2d: \", twoD)\u000A');codeLines.push('    twoD \u003D [2][3]int{\u000A        {1, 2, 3},\u000A        {1, 2, 3},\u000A    }\u000A    fmt.Println(\"2d: \", twoD)\u000A}\u000A');codeLines.push('');codeLines.push('');
 </script>
 <script src="site.js" async></script>
 </body>
